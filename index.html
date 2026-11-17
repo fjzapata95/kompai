@@ -10,6 +10,9 @@
     <meta property="og:type" content="website">
     <meta name="theme-color" content="#0F766E">
     <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <meta property="og:image" content="https://fjzapata95.github.io/kompai/brand/kompai-og.png">
+    <meta name="twitter:card" content="summary_large_image">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -20,8 +23,7 @@
     <header class="nav" id="top">
         <div class="container nav__inner">
             <a href="#top" class="brand" aria-label="Kompai, inicio">
-                <span class="brand__mark" aria-hidden="true">K</span>
-                <span class="brand__name">Kompai</span>
+                <img src="brand/kompai-logo.svg" alt="Kompai" width="155" height="40">
             </a>
             <nav class="nav__links" aria-label="Secciones">
                 <a href="#como-funciona">Cómo funciona</a>
@@ -60,7 +62,7 @@
                     <ul class="hero__checks">
                         <li>Sin instalar programas</li>
                         <li>Te lo dejamos configurado</li>
-                        <li>Pensado para Colombia</li>
+                        <li>Empieza aunque aún no factures</li>
                     </ul>
                 </div>
 
@@ -229,22 +231,22 @@
                 <div class="section__head">
                     <span class="kicker">Planes</span>
                     <h2>Empieza gratis. Crece cuando lo necesites.</h2>
-                    <p class="section__sub">Los precios finales se anunciarán en el lanzamiento. Los negocios piloto tendrán precio especial de fundador.</p>
+                    <p class="section__sub">Precios de lanzamiento, mensuales. Los negocios piloto tienen <b>50% de descuento por 6 meses</b> y el montaje gratis.</p>
                 </div>
                 <div class="grid grid--4 plans">
                     <article class="plan">
                         <h3>Gratis</h3>
-                        <p class="plan__price">$0</p>
+                        <p class="plan__price">$0<small>/mes</small></p>
                         <p class="plan__for">Para probar</p>
                         <ul class="checklist">
                             <li>Catálogo con tu enlace</li>
                             <li>Pedidos por WhatsApp</li>
-                            <li>Límite de pedidos al mes</li>
+                            <li>Hasta 50 pedidos al mes</li>
                         </ul>
                     </article>
                     <article class="plan">
                         <h3>Emprende</h3>
-                        <p class="plan__price">Próximamente</p>
+                        <p class="plan__price">$24.900<small>/mes</small></p>
                         <p class="plan__for">Para organizarte</p>
                         <ul class="checklist">
                             <li>Pedidos ilimitados</li>
@@ -255,17 +257,17 @@
                     <article class="plan plan--featured">
                         <span class="plan__badge">Más completo</span>
                         <h3>Negocio</h3>
-                        <p class="plan__price">Próximamente</p>
+                        <p class="plan__price">$54.900<small>/mes</small></p>
                         <p class="plan__for">Para facturar y cobrar</p>
                         <ul class="checklist">
                             <li>Todo lo de Emprende</li>
-                            <li>Facturación electrónica</li>
+                            <li>Facturación electrónica (100 al mes)</li>
                             <li>Fiado y recordatorios</li>
                         </ul>
                     </article>
                     <article class="plan">
                         <h3>Crece</h3>
-                        <p class="plan__price">Próximamente</p>
+                        <p class="plan__price">$89.900<small>/mes</small></p>
                         <p class="plan__for">Para equipos y sedes</p>
                         <ul class="checklist">
                             <li>Todo lo de Negocio</li>
@@ -273,6 +275,50 @@
                             <li>Redes sociales y campañas</li>
                         </ul>
                     </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- MISIONES DE BIENVENIDA -->
+        <section class="section section--soft" id="empieza">
+            <div class="container">
+                <div class="section__head">
+                    <span class="kicker">Empieza en un día</span>
+                    <h2>Tres misiones y tu negocio ya está andando</h2>
+                    <p class="section__sub">Te acompañamos paso a paso. No necesitas saber de tecnología.</p>
+                </div>
+                <ol class="missions">
+                    <li class="mission">
+                        <span class="mission__badge">Misión 1</span>
+                        <h3>Monta tu catálogo</h3>
+                        <p>Sube tus productos o servicios con fotos y precios. Si quieres, lo hacemos por ti.</p>
+                    </li>
+                    <li class="mission">
+                        <span class="mission__badge">Misión 2</span>
+                        <h3>Recibe tu primer pedido</h3>
+                        <p>Comparte tu enlace en WhatsApp e Instagram y mira cómo llega el primer pedido o cita.</p>
+                    </li>
+                    <li class="mission">
+                        <span class="mission__badge">Misión 3</span>
+                        <h3>Haz que tu cliente vuelva</h3>
+                        <p>Activa tu primer recordatorio automático: la próxima cita, la promo o la recompra.</p>
+                    </li>
+                </ol>
+            </div>
+        </section>
+
+        <!-- CONFIANZA -->
+        <section class="section" id="confianza">
+            <div class="container">
+                <div class="section__head">
+                    <span class="kicker">Confianza</span>
+                    <h2>Tus datos y los de tus clientes, protegidos</h2>
+                </div>
+                <div class="grid grid--4 trust">
+                    <article class="trust__item"><span>🔒</span><h3>Datos protegidos</h3><p>Información cifrada en tránsito y acceso con usuario por persona.</p></article>
+                    <article class="trust__item"><span>💾</span><h3>Copias diarias</h3><p>Respaldo automático de tu información todos los días.</p></article>
+                    <article class="trust__item"><span>👥</span><h3>Permisos por rol</h3><p>Dueño, cajero, técnico o contador: cada uno ve solo lo que le corresponde.</p></article>
+                    <article class="trust__item"><span>🧾</span><h3>DIAN y Habeas Data</h3><p>Facturación con proveedor autorizado y tratamiento de datos según la Ley 1581.</p></article>
                 </div>
             </div>
         </section>
@@ -292,6 +338,10 @@
                     <details>
                         <summary>¿Sirve para mi tipo de negocio?</summary>
                         <p>Kompai se adapta a negocios que venden productos, servicios o ambos: comidas, lavaderos, veterinarias, peluquerías, tiendas, servicios a domicilio y más. Si tienes dudas, escríbenos.</p>
+                    </details>
+                    <details>
+                        <summary>¿Necesito RUT o facturar electrónicamente para usar Kompai?</summary>
+                        <p>No. Puedes empezar con pedidos, agenda, caja, inventario y fiado aunque todavía no factures. Cuando te formalices, activas la facturación electrónica y tu contador te acompaña desde el mismo sistema.</p>
                     </details>
                     <details>
                         <summary>¿Cómo funciona la facturación electrónica?</summary>
@@ -362,9 +412,8 @@
 
     <footer class="footer">
         <div class="container footer__inner">
-            <a href="#top" class="brand brand--footer">
-                <span class="brand__mark" aria-hidden="true">K</span>
-                <span class="brand__name">Kompai</span>
+            <a href="#top" class="brand brand--footer" aria-label="Kompai, inicio">
+                <img src="brand/kompai-logo-blanco.svg" alt="Kompai" width="140" height="36">
             </a>
             <p>Tus clientes escriben. Kompai hace el resto.</p>
             <p class="footer__small">© <span id="year"></span> Kompai · Hecho en Colombia 🇨🇴</p>

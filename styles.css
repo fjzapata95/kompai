@@ -79,6 +79,8 @@ p { margin: 0 0 1em; }
 .mobile-menu[hidden] { display: none; }
 
 .brand { display: inline-flex; align-items: center; gap: .55rem; text-decoration: none; }
+.brand img { display: block; height: 40px; width: auto; }
+.brand--footer img { height: 36px; }
 .brand__mark {
     display: grid; place-items: center; width: 36px; height: 36px; border-radius: 11px;
     background: linear-gradient(135deg, var(--primary), var(--primary-dark)); color: #fff;
@@ -221,9 +223,22 @@ p { margin: 0 0 1em; }
 .plan { position: relative; display: flex; flex-direction: column; padding: 28px 24px; border-radius: var(--radius); border: 1px solid var(--border); background: #fff; }
 .plan--featured { border: 2px solid var(--primary); box-shadow: var(--shadow); }
 .plan__badge { position: absolute; top: -13px; left: 24px; padding: .25rem .8rem; border-radius: 999px; background: var(--accent); font-size: .75rem; font-weight: 800; }
-.plan__price { margin: 0; font-size: 1.6rem; font-weight: 800; color: var(--primary-dark); }
+.plan__price { margin: 0; font-size: 1.9rem; font-weight: 800; color: var(--primary-dark); letter-spacing: -.02em; }
+.plan__price small { font-size: .9rem; font-weight: 600; color: var(--text-soft); margin-left: .15rem; }
 .plan__for { color: var(--text-soft); font-size: .92rem; }
 .plan .checklist { margin-bottom: 0; font-size: .93rem; }
+
+/* MISIONES */
+.missions { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; list-style: none; padding: 0; margin: 0; }
+.mission { position: relative; padding: 28px; border-radius: var(--radius); background: #fff; border: 1px solid var(--border); }
+.mission::after { content: ''; position: absolute; top: 28px; right: 28px; width: 14px; height: 14px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 0 5px #FEF3C7; }
+.mission__badge { display: inline-block; margin-bottom: .9rem; padding: .25rem .7rem; border-radius: 999px; background: var(--primary); color: #fff; font-size: .78rem; font-weight: 800; }
+.mission p { margin: 0; color: var(--text-soft); }
+
+/* CONFIANZA */
+.trust__item { padding: 24px; border-radius: var(--radius); background: var(--primary-light); border: 1px solid var(--primary-soft); }
+.trust__item > span { display: block; font-size: 1.6rem; margin-bottom: .6rem; }
+.trust__item p { margin: 0; color: var(--text-soft); font-size: .95rem; }
 
 /* PREGUNTAS */
 .faq details { margin-bottom: 12px; padding: 0 22px; border-radius: 14px; background: #fff; border: 1px solid var(--border); }
@@ -273,13 +288,14 @@ p { margin: 0 0 1em; }
     .hero__visual { margin-top: 24px; }
     .steps, .grid--4 { grid-template-columns: repeat(2, 1fr); }
     .grid--3, .sector-panel { grid-template-columns: 1fr 1fr; }
+    .missions { grid-template-columns: 1fr; }
 }
 @media (max-width: 760px) {
     .nav__links, .nav__inner > .btn { display: none; }
     .nav__toggle { display: block; }
     .hero { padding: 48px 0 72px; }
     .section { padding: 72px 0; }
-    .steps, .grid--3, .grid--4, .sector-panel, .cta__form { grid-template-columns: 1fr; }
+    .steps, .grid--3, .grid--4, .sector-panel, .cta__form, .missions { grid-template-columns: 1fr; }
     .phone { width: min(300px, 100%); transform: none; }
     .float-card--a { left: -8px; top: -18px; }
     .float-card--b { right: -8px; top: -18px; left: auto; }

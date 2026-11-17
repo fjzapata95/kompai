@@ -12,7 +12,8 @@ La página está en modo **lista de espera para negocios piloto**: invita a los 
 | `index.html` | Estructura y textos de la página |
 | `styles.css` | Diseño (colores, tipografía, adaptación a celular) |
 | `app.js` | Sectores interactivos, menú móvil y formulario a WhatsApp |
-| `favicon.svg` | Ícono de la pestaña |
+| `favicon.svg`, `apple-touch-icon.png` | Íconos de la pestaña y del celular |
+| `brand/` | Identidad: logo, símbolo, versiones en blanco, avatar para WhatsApp e imagen para compartir (SVG y PNG) |
 
 ## Antes de publicar
 
@@ -46,3 +47,9 @@ Abre `index.html` con doble clic en el navegador. No necesita instalar nada.
 ### Dominio propio (opcional)
 
 Si compras `kompai.app`, `kompai.co` u otro dominio, configúralo en **Settings → Pages → Custom domain** y sigue las instrucciones de DNS de GitHub.
+
+## Identidad de marca
+
+- **Colores:** Verde Kompai `#0F766E`, Verde profundo `#134E4A`, Turquesa Caribe `#14B8A6`, Ámbar sol `#F59E0B`, Tinta `#0F172A`, Menta clara `#F0FDFA`.
+- **Tipografía:** [Plus Jakarta Sans](https://fonts.google.com/specimen/Plus+Jakarta+Sans) (licencia OFL).
+- **Avatar para WhatsApp e Instagram:** `brand/kompai-avatar-whatsapp.png`.
