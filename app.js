@@ -7,7 +7,7 @@
  * Código de país + número, sin espacios ni símbolos. Ejemplo: '573001234567'.
  * Mientras esté vacío, el formulario muestra un aviso en lugar de abrir WhatsApp.
  */
-const WHATSAPP_NUMBER = '';
+const WHATSAPP_NUMBER = '573015033953';
 
 /**
  * SECTORES: CÓMO SE ADAPTA KOMPAI A CADA TIPO DE NEGOCIO.
