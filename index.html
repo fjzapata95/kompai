@@ -317,11 +317,11 @@
                 <form class="cta__form" id="lead-form" novalidate>
                     <label>
                         <span>Tu nombre</span>
-                        <input name="nombre" type="text" autocomplete="name" required>
+                        <input name="nombre" type="text" autocomplete="name" maxlength="60" required>
                     </label>
                     <label>
                         <span>Nombre del negocio</span>
-                        <input name="negocio" type="text" required>
+                        <input name="negocio" type="text" maxlength="80" required>
                     </label>
                     <label>
                         <span>Tipo de negocio</span>
@@ -343,8 +343,12 @@
                     </label>
                     <label>
                         <span>Ciudad</span>
-                        <input name="ciudad" type="text" autocomplete="address-level2">
+                        <input name="ciudad" type="text" autocomplete="address-level2" maxlength="60">
                     </label>
+                    <!-- CAMPO TRAMPA (HONEYPOT): INVISIBLE PARA LAS PERSONAS; SI VIENE LLENO, ES UN BOT -->
+                    <div class="hp" aria-hidden="true">
+                        <label>Sitio web <input name="sitio_web" type="text" tabindex="-1" autocomplete="off"></label>
+                    </div>
                     <label class="cta__consent">
                         <input name="consent" type="checkbox" required>
                         <span>Autorizo el tratamiento de mis datos para ser contactado sobre Kompai (Ley 1581 de 2012).</span>

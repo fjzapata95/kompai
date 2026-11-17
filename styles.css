@@ -248,6 +248,9 @@ p { margin: 0 0 1em; }
 .cta__consent input { margin-top: .3rem; accent-color: var(--primary); }
 .cta__form .btn { grid-column: 1 / -1; }
 .cta__error { grid-column: 1 / -1; margin: 0; color: #B91C1C; font-weight: 600; text-align: center; }
+.cta__error--ok { color: var(--primary-dark); }
+/* CAMPO TRAMPA: FUERA DE LA PANTALLA (NO display:none, QUE ALGUNOS BOTS DETECTAN) */
+.hp { position: absolute !important; left: -10000px; top: auto; width: 1px; height: 1px; overflow: hidden; }
 
 /* PIE */
 .footer { padding: 40px 0; background: var(--text); color: #CBD5E1; }

@@ -137,30 +137,81 @@ if (WHATSAPP_NUMBER) {
     floatBtn.rel = 'noopener';
 }
 
+// FORMULARIO DE PILOTOS CON PROTECCIÓN CONTRA ENVÍOS AUTOMÁTICOS (SIN CAPTCHA):
+// CAMPO TRAMPA, TIEMPO MÍNIMO DE LLENADO, VALIDACIÓN DEL CONTENIDO Y ESPERA ENTRE ENVÍOS.
 const form = document.getElementById('lead-form');
 const formError = document.getElementById('form-error');
+const LOADED_AT = Date.now();
+const MIN_FILL_MS = 3000;          // UNA PERSONA TARDA MÁS DE 3 SEGUNDOS EN LLENARLO.
+const COOLDOWN_MS = 60 * 1000;     // UN ENVÍO POR MINUTO.
+const COOLDOWN_KEY = 'kompai_lead_sent_at';
+const LINK_PATTERN = /(https?:\/\/|www\.|\.(com|net|org|ru|xyz|info|top|io)\b|<[^>]+>)/i;
+const HAS_LETTERS = /\p{L}{2,}/u;
+
+const clean = (value) => String(value ?? '').replace(/\s+/g, ' ').trim();
+
+function showMessage(text, ok = false) {
+    formError.textContent = text;
+    formError.classList.toggle('cta__error--ok', ok);
+    formError.hidden = false;
+}
+
+function lastSentAt() {
+    try { return Number(localStorage.getItem(COOLDOWN_KEY)) || 0; } catch { return 0; }
+}
+
+function markSent() {
+    try { localStorage.setItem(COOLDOWN_KEY, String(Date.now())); } catch { /* SIN ALMACENAMIENTO: SE OMITE LA ESPERA */ }
+}
+
 form.addEventListener('submit', (event) => {
     event.preventDefault();
     const data = new FormData(form);
-    const valid = data.get('nombre')?.trim() && data.get('negocio')?.trim() && data.get('tipo') && data.get('consent');
-    if (!valid) {
-        formError.textContent = 'Completa tu nombre, el negocio, el tipo y la autorización de datos.';
-        formError.hidden = false;
+    const nombre = clean(data.get('nombre'));
+    const negocio = clean(data.get('negocio'));
+    const ciudad = clean(data.get('ciudad'));
+    const tipo = clean(data.get('tipo'));
+
+    // BOTS: CAMPO TRAMPA LLENO O ENVÍO DEMASIADO RÁPIDO. SE RESPONDE COMO SI FUERA EXITOSO PARA NO DARLES PISTAS.
+    if (clean(data.get('sitio_web')) || Date.now() - LOADED_AT < MIN_FILL_MS) {
+        form.reset();
+        showMessage('¡Gracias! Te contactaremos pronto.', true);
         return;
     }
+
+    if (!nombre || !negocio || !tipo || !data.get('consent')) {
+        showMessage('Completa tu nombre, el negocio, el tipo y la autorización de datos.');
+        return;
+    }
+    if (!HAS_LETTERS.test(nombre) || !HAS_LETTERS.test(negocio)) {
+        showMessage('Revisa tu nombre y el nombre del negocio.');
+        return;
+    }
+    if ([nombre, negocio, ciudad].some(value => LINK_PATTERN.test(value))) {
+        showMessage('Por favor no incluyas enlaces ni direcciones web.');
+        return;
+    }
+
+    const wait = COOLDOWN_MS - (Date.now() - lastSentAt());
+    if (wait > 0) {
+        showMessage(`Ya recibimos tus datos. Si necesitas enviarlos de nuevo, espera ${Math.ceil(wait / 1000)} segundos.`);
+        return;
+    }
+
     if (!WHATSAPP_NUMBER) {
-        formError.textContent = 'Muy pronto podrás escribirnos por aquí. ¡Gracias por tu interés!';
-        formError.hidden = false;
+        showMessage('Muy pronto podrás escribirnos por aquí. ¡Gracias por tu interés!', true);
         return;
     }
+
     formError.hidden = true;
     const text = [
         'Hola, quiero ser negocio piloto de Kompai 👋',
-        `Nombre: ${data.get('nombre').trim()}`,
-        `Negocio: ${data.get('negocio').trim()}`,
-        `Tipo: ${data.get('tipo')}`,
-        data.get('ciudad')?.trim() ? `Ciudad: ${data.get('ciudad').trim()}` : null,
+        `Nombre: ${nombre}`,
+        `Negocio: ${negocio}`,
+        `Tipo: ${tipo}`,
+        ciudad ? `Ciudad: ${ciudad}` : null,
     ].filter(Boolean).join('\n');
+    markSent();
     window.open(waLink(text), '_blank', 'noopener');
 });
 
