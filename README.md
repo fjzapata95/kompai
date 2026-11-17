@@ -1,5 +1,7 @@
 # Kompai · Landing
 
+En línea: **https://kompai.app**
+
 Página de presentación de **Kompai**, la plataforma para pequeños negocios en Colombia.
 Tus clientes escriben, Kompai hace el resto.
 
@@ -44,9 +46,17 @@ Abre `index.html` con doble clic en el navegador. No necesita instalar nada.
 3. En GitHub: **Settings → Pages → Build and deployment**, elige **Deploy from a branch**, rama `main` y carpeta `/ (root)`. Guarda.
 4. En uno o dos minutos la página queda en `https://TU_USUARIO.github.io/kompai/`.
 
-### Dominio propio (opcional)
+### Dominio propio
 
-Si compras `kompai.app`, `kompai.co` u otro dominio, configúralo en **Settings → Pages → Custom domain** y sigue las instrucciones de DNS de GitHub.
+La página usa **kompai.app** (archivo `CNAME`). En el DNS del dominio:
+
+| Tipo | Nombre | Valor |
+|---|---|---|
+| A | @ | 185.199.108.153 |
+| A | @ | 185.199.109.153 |
+| A | @ | 185.199.110.153 |
+| A | @ | 185.199.111.153 |
+| CNAME | www | fjzapata95.github.io |
 
 ## Identidad de marca
 
