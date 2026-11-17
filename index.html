@@ -1,0 +1,376 @@
+<!doctype html>
+<html lang="es-CO">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Kompai · Tus clientes escriben. Kompai hace el resto.</title>
+    <meta name="description" content="Pedidos, citas, cobros y facturación electrónica que se organizan solos desde WhatsApp. La plataforma para pequeños negocios en Colombia.">
+    <meta property="og:title" content="Kompai · Tus clientes escriben. Kompai hace el resto.">
+    <meta property="og:description" content="Pedidos, citas, cobros y facturación electrónica que se organizan solos desde WhatsApp.">
+    <meta property="og:type" content="website">
+    <meta name="theme-color" content="#0F766E">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- NAVEGACIÓN -->
+    <header class="nav" id="top">
+        <div class="container nav__inner">
+            <a href="#top" class="brand" aria-label="Kompai, inicio">
+                <span class="brand__mark" aria-hidden="true">K</span>
+                <span class="brand__name">Kompai</span>
+            </a>
+            <nav class="nav__links" aria-label="Secciones">
+                <a href="#como-funciona">Cómo funciona</a>
+                <a href="#sectores">Sectores</a>
+                <a href="#funciones">Funciones</a>
+                <a href="#contadores">Contadores</a>
+                <a href="#planes">Planes</a>
+            </nav>
+            <a href="#unete" class="btn btn--primary btn--sm">Quiero ser piloto</a>
+            <button class="nav__toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+        <div class="mobile-menu" id="mobile-menu" hidden>
+            <a href="#como-funciona">Cómo funciona</a>
+            <a href="#sectores">Sectores</a>
+            <a href="#funciones">Funciones</a>
+            <a href="#contadores">Contadores</a>
+            <a href="#planes">Planes</a>
+            <a href="#unete" class="btn btn--primary">Quiero ser piloto</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- PORTADA -->
+        <section class="hero">
+            <div class="container hero__inner">
+                <div class="hero__copy">
+                    <span class="pill">🚀 Muy pronto · Cupos para negocios piloto</span>
+                    <h1>Tus clientes escriben.<br><span class="accent">Kompai hace el resto.</span></h1>
+                    <p class="lead">Pedidos, citas, cobros y facturación electrónica que se organizan solos desde WhatsApp. Un solo sistema que se adapta a tu negocio, desde el celular.</p>
+                    <div class="hero__ctas">
+                        <a href="#unete" class="btn btn--primary btn--lg">Quiero ser negocio piloto</a>
+                        <a href="#como-funciona" class="btn btn--ghost btn--lg">Ver cómo funciona</a>
+                    </div>
+                    <ul class="hero__checks">
+                        <li>Sin instalar programas</li>
+                        <li>Te lo dejamos configurado</li>
+                        <li>Pensado para Colombia</li>
+                    </ul>
+                </div>
+
+                <!-- MAQUETA DEL CHAT -->
+                <div class="hero__visual" aria-label="Ejemplo de conversación por WhatsApp con Kompai">
+                    <div class="phone">
+                        <div class="phone__top">
+                            <span class="phone__avatar">🍔</span>
+                            <div>
+                                <strong>Burger La 24</strong>
+                                <small>en línea</small>
+                            </div>
+                        </div>
+                        <div class="chat">
+                            <div class="msg msg--in">Hola, ¿qué tienen hoy? <time>7:02 p. m.</time></div>
+                            <div class="msg msg--out">
+                                ¡Hola, Andrés! 👋 Mira el menú de hoy y haz tu pedido aquí:
+                                <span class="msg__link">👉 Hacer mi pedido</span>
+                                <time>7:02 p. m.</time>
+                            </div>
+                            <div class="msg msg--out msg--card">
+                                <strong>✅ Pedido #128 confirmado</strong>
+                                <span>2 Hamburguesas dobles · 1 Limonada</span>
+                                <span>Domicilio · Pago con Nequi</span>
+                                <b>Total: $46.000</b>
+                                <time>7:05 p. m.</time>
+                            </div>
+                            <div class="msg msg--out">🛵 Tu pedido va en camino. Llega en 20 minutos. <time>7:31 p. m.</time></div>
+                        </div>
+                    </div>
+                    <div class="float-card float-card--a">
+                        <span class="dot dot--green"></span> Pedido guardado
+                    </div>
+                    <div class="float-card float-card--b">
+                        📦 Inventario actualizado
+                    </div>
+                    <div class="float-card float-card--c">
+                        🧾 Factura electrónica lista
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- DOLORES -->
+        <section class="section section--soft" id="dolores">
+            <div class="container">
+                <div class="section__head">
+                    <span class="kicker">¿Te suena familiar?</span>
+                    <h2>Tu negocio vive en WhatsApp… y en un cuaderno</h2>
+                </div>
+                <div class="grid grid--3">
+                    <article class="pain">
+                        <span class="pain__icon">📱</span>
+                        <h3>Pedidos y citas que se pierden</h3>
+                        <p>Entre cientos de mensajes, un pedido se olvida, una cita se cruza o un cliente se queda sin respuesta.</p>
+                    </article>
+                    <article class="pain">
+                        <span class="pain__icon">📒</span>
+                        <h3>No sabes cuánto ganas</h3>
+                        <p>Las ventas están en el cuaderno, el inventario "a ojo" y el fiado en la memoria.</p>
+                    </article>
+                    <article class="pain">
+                        <span class="pain__icon">🧾</span>
+                        <h3>La DIAN te quita el sueño</h3>
+                        <p>La facturación electrónica parece complicada y tu contador siempre recibe la información tarde.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- CÓMO FUNCIONA -->
+        <section class="section" id="como-funciona">
+            <div class="container">
+                <div class="section__head">
+                    <span class="kicker">Cómo funciona</span>
+                    <h2>Del mensaje a la venta, sin que tengas que estar pegado al celular</h2>
+                </div>
+                <ol class="steps">
+                    <li class="step">
+                        <span class="step__num">1</span>
+                        <h3>Tu cliente escribe</h3>
+                        <p>Por WhatsApp, Instagram o con tu enlace. Kompai le responde al instante.</p>
+                    </li>
+                    <li class="step">
+                        <span class="step__num">2</span>
+                        <h3>Pide o agenda solo</h3>
+                        <p>Elige productos, servicios, horario y forma de pago desde un enlace a tu medida.</p>
+                    </li>
+                    <li class="step">
+                        <span class="step__num">3</span>
+                        <h3>Todo queda organizado</h3>
+                        <p>Ves cada pedido y cita en tu tablero. El cliente recibe avisos en cada paso.</p>
+                    </li>
+                    <li class="step">
+                        <span class="step__num">4</span>
+                        <h3>Cobras, facturas y vuelve</h3>
+                        <p>Se registra el pago, se factura con un clic y le recordamos al cliente su próxima compra.</p>
+                    </li>
+                </ol>
+            </div>
+        </section>
+
+        <!-- SECTORES -->
+        <section class="section section--soft" id="sectores">
+            <div class="container">
+                <div class="section__head">
+                    <span class="kicker">Se adapta a tu negocio</span>
+                    <h2>Un solo sistema. Mil formas de usarlo.</h2>
+                    <p class="section__sub">Tú decides qué ofreces, qué datos pides, cómo entregas y cómo cobras. Elige tu tipo de negocio:</p>
+                </div>
+                <div class="sectors" role="tablist" aria-label="Tipos de negocio"></div>
+                <div class="sector-panel" id="sector-panel" role="tabpanel" aria-live="polite"></div>
+            </div>
+        </section>
+
+        <!-- FUNCIONES -->
+        <section class="section" id="funciones">
+            <div class="container">
+                <div class="section__head">
+                    <span class="kicker">Funciones</span>
+                    <h2>Todo lo que tu negocio necesita, conectado</h2>
+                    <p class="section__sub">El pedido de WhatsApp se vuelve venta, descuenta inventario, se factura y llega al reporte de tu contador.</p>
+                </div>
+                <div class="grid grid--3 features">
+                    <article class="feature"><span>🛒</span><h3>Catálogo y pedidos</h3><p>Tu propio enlace con fotos, precios, adicionales, domicilios y horarios.</p></article>
+                    <article class="feature"><span>📅</span><h3>Agenda y turnos</h3><p>Citas por persona o recurso, recordatorios y agendamiento automático por WhatsApp.</p></article>
+                    <article class="feature"><span>🚗</span><h3>Servicios en calle</h3><p>Rutas, "voy en camino", fotos de antes y después, y firma del cliente con evidencia.</p></article>
+                    <article class="feature"><span>💵</span><h3>Caja y pagos</h3><p>Efectivo, Nequi, Daviplata, transferencia o llaves Bre-B, y cierre de caja.</p></article>
+                    <article class="feature"><span>📦</span><h3>Inventario</h3><p>Se descuenta solo con cada venta. Alertas de bajo stock y vencimientos.</p></article>
+                    <article class="feature"><span>🤝</span><h3>Fiado y cobros</h3><p>Lo que te deben, abonos y recordatorios de pago automáticos por WhatsApp.</p></article>
+                    <article class="feature"><span>🧾</span><h3>Facturación electrónica</h3><p>Factura y documento equivalente POS electrónico con un clic, a través de un proveedor autorizado.</p></article>
+                    <article class="feature"><span>📣</span><h3>Recordatorios y promociones</h3><p>Mensajes que hacen volver a tus clientes: la próxima cita, la vacuna, la promo del viernes.</p></article>
+                    <article class="feature"><span>📊</span><h3>Reportes</h3><p>Cuánto vendes, qué se vende más y cuánto ganas. Y un resumen semanal por WhatsApp.</p></article>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTADORES -->
+        <section class="section section--dark" id="contadores">
+            <div class="container split">
+                <div>
+                    <span class="kicker kicker--light">Para contadores</span>
+                    <h2>Tus clientes, ordenados. Tu información, a tiempo.</h2>
+                    <p class="lead lead--light">Kompai incluye un portal para que el contador vea a todos sus clientes en un solo lugar y les ayude a cumplir.</p>
+                    <ul class="checklist checklist--light">
+                        <li>Ventas, facturas y pendientes de cada cliente</li>
+                        <li>Calendario tributario con recordatorios a tus clientes</li>
+                        <li>Exportes listos para tu contabilidad</li>
+                        <li>Ingreso recurrente por cada cliente que invites</li>
+                    </ul>
+                    <a href="#unete" class="btn btn--accent btn--lg">Soy contador, quiero saber más</a>
+                </div>
+                <div class="accountant-card" aria-hidden="true">
+                    <div class="accountant-card__head">Mis clientes</div>
+                    <div class="client-row"><span>🍔 Burger La 24</span><b class="tag tag--ok">Al día</b></div>
+                    <div class="client-row"><span>🐾 Veterinaria Peluditos</span><b class="tag tag--warn">IVA vence en 3 días</b></div>
+                    <div class="client-row"><span>🚗 Lavadero El Brillo</span><b class="tag tag--ok">Al día</b></div>
+                    <div class="client-row"><span>👗 Tienda Moda Caribe</span><b class="tag tag--info">12 facturas nuevas</b></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PLANES -->
+        <section class="section" id="planes">
+            <div class="container">
+                <div class="section__head">
+                    <span class="kicker">Planes</span>
+                    <h2>Empieza gratis. Crece cuando lo necesites.</h2>
+                    <p class="section__sub">Los precios finales se anunciarán en el lanzamiento. Los negocios piloto tendrán precio especial de fundador.</p>
+                </div>
+                <div class="grid grid--4 plans">
+                    <article class="plan">
+                        <h3>Gratis</h3>
+                        <p class="plan__price">$0</p>
+                        <p class="plan__for">Para probar</p>
+                        <ul class="checklist">
+                            <li>Catálogo con tu enlace</li>
+                            <li>Pedidos por WhatsApp</li>
+                            <li>Límite de pedidos al mes</li>
+                        </ul>
+                    </article>
+                    <article class="plan">
+                        <h3>Emprende</h3>
+                        <p class="plan__price">Próximamente</p>
+                        <p class="plan__for">Para organizarte</p>
+                        <ul class="checklist">
+                            <li>Pedidos ilimitados</li>
+                            <li>Agenda y caja</li>
+                            <li>Inventario y reportes</li>
+                        </ul>
+                    </article>
+                    <article class="plan plan--featured">
+                        <span class="plan__badge">Más completo</span>
+                        <h3>Negocio</h3>
+                        <p class="plan__price">Próximamente</p>
+                        <p class="plan__for">Para facturar y cobrar</p>
+                        <ul class="checklist">
+                            <li>Todo lo de Emprende</li>
+                            <li>Facturación electrónica</li>
+                            <li>Fiado y recordatorios</li>
+                        </ul>
+                    </article>
+                    <article class="plan">
+                        <h3>Crece</h3>
+                        <p class="plan__price">Próximamente</p>
+                        <p class="plan__for">Para equipos y sedes</p>
+                        <ul class="checklist">
+                            <li>Todo lo de Negocio</li>
+                            <li>Servicios en calle con firma</li>
+                            <li>Redes sociales y campañas</li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- PREGUNTAS -->
+        <section class="section section--soft" id="preguntas">
+            <div class="container container--narrow">
+                <div class="section__head">
+                    <span class="kicker">Preguntas frecuentes</span>
+                    <h2>Lo que nos preguntan</h2>
+                </div>
+                <div class="faq">
+                    <details>
+                        <summary>¿Necesito saber de tecnología?</summary>
+                        <p>No. Kompai funciona desde el celular y te ayudamos a montar tu catálogo, tus servicios y tu configuración inicial.</p>
+                    </details>
+                    <details>
+                        <summary>¿Sirve para mi tipo de negocio?</summary>
+                        <p>Kompai se adapta a negocios que venden productos, servicios o ambos: comidas, lavaderos, veterinarias, peluquerías, tiendas, servicios a domicilio y más. Si tienes dudas, escríbenos.</p>
+                    </details>
+                    <details>
+                        <summary>¿Cómo funciona la facturación electrónica?</summary>
+                        <p>Las facturas y el documento equivalente POS electrónico se emiten a través de un proveedor tecnológico autorizado por la DIAN, conectado a Kompai. Tú solo oprimes "facturar".</p>
+                    </details>
+                    <details>
+                        <summary>¿Tengo que cambiar mi número de WhatsApp?</summary>
+                        <p>No. La idea es que sigas usando tu número. Te contaremos las opciones de conexión al momento de configurar tu negocio.</p>
+                    </details>
+                    <details>
+                        <summary>¿Qué significa ser negocio piloto?</summary>
+                        <p>Eres de los primeros en usar Kompai, con acompañamiento cercano y precio especial de fundador. A cambio, nos cuentas qué te sirve y qué mejorar.</p>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <!-- ÚNETE -->
+        <section class="section cta" id="unete">
+            <div class="container container--narrow">
+                <h2>Sé de los primeros negocios en Kompai</h2>
+                <p class="lead">Déjanos tus datos y te contactamos para mostrarte cómo funcionaría en tu negocio.</p>
+                <form class="cta__form" id="lead-form" novalidate>
+                    <label>
+                        <span>Tu nombre</span>
+                        <input name="nombre" type="text" autocomplete="name" required>
+                    </label>
+                    <label>
+                        <span>Nombre del negocio</span>
+                        <input name="negocio" type="text" required>
+                    </label>
+                    <label>
+                        <span>Tipo de negocio</span>
+                        <select name="tipo" required>
+                            <option value="">Selecciona…</option>
+                            <option>Comidas y bebidas</option>
+                            <option>Lavadero</option>
+                            <option>Veterinaria</option>
+                            <option>Peluquería o estética</option>
+                            <option>Baño o paseo de mascotas</option>
+                            <option>Servicios técnicos o a domicilio</option>
+                            <option>Farmacia</option>
+                            <option>Ropa y accesorios</option>
+                            <option>Joyería</option>
+                            <option>Celulares y tecnología</option>
+                            <option>Soy contador</option>
+                            <option>Otro</option>
+                        </select>
+                    </label>
+                    <label>
+                        <span>Ciudad</span>
+                        <input name="ciudad" type="text" autocomplete="address-level2">
+                    </label>
+                    <label class="cta__consent">
+                        <input name="consent" type="checkbox" required>
+                        <span>Autorizo el tratamiento de mis datos para ser contactado sobre Kompai (Ley 1581 de 2012).</span>
+                    </label>
+                    <button type="submit" class="btn btn--primary btn--lg">Enviar por WhatsApp</button>
+                    <p class="cta__error" id="form-error" role="alert" hidden>Completa tu nombre, el negocio, el tipo y la autorización de datos.</p>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer__inner">
+            <a href="#top" class="brand brand--footer">
+                <span class="brand__mark" aria-hidden="true">K</span>
+                <span class="brand__name">Kompai</span>
+            </a>
+            <p>Tus clientes escriben. Kompai hace el resto.</p>
+            <p class="footer__small">© <span id="year"></span> Kompai · Hecho en Colombia 🇨🇴</p>
+        </div>
+    </footer>
+
+    <a class="wa-float" id="wa-float" href="#unete" aria-label="Escríbenos por WhatsApp">
+        <svg viewBox="0 0 32 32" width="28" height="28" aria-hidden="true"><path fill="currentColor" d="M16 3a13 13 0 0 0-11.2 19.6L3 29l6.6-1.7A13 13 0 1 0 16 3Zm0 23.6a10.6 10.6 0 0 1-5.4-1.5l-.4-.2-3.9 1 1-3.8-.2-.4A10.6 10.6 0 1 1 16 26.6Zm5.8-7.9c-.3-.2-1.9-.9-2.2-1s-.5-.2-.7.2-.8 1-1 1.2-.4.2-.7 0a8.7 8.7 0 0 1-4.3-3.8c-.3-.6.3-.5.9-1.6.1-.2 0-.4 0-.5l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6a1.2 1.2 0 0 0-.9.4 3.7 3.7 0 0 0-1.1 2.7 6.5 6.5 0 0 0 1.3 3.4 14.6 14.6 0 0 0 5.6 5c2.1.9 2.9 1 4 .8a3.4 3.4 0 0 0 2.2-1.6 2.8 2.8 0 0 0 .2-1.6c0-.1-.3-.2-.6-.4Z"/></svg>
+    </a>
+
+    <script src="app.js"></script>
+</body>
+</html>
