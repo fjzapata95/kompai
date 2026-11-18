@@ -29,6 +29,7 @@
             </a>
             <nav class="nav__links" aria-label="Secciones">
                 <a href="#como-funciona">Cómo funciona</a>
+                <a href="#producto">Así se ve</a>
                 <a href="#sectores">Sectores</a>
                 <a href="#funciones">Funciones</a>
                 <a href="#contadores">Contadores</a>
@@ -41,6 +42,7 @@
         </div>
         <div class="mobile-menu" id="mobile-menu" hidden>
             <a href="#como-funciona">Cómo funciona</a>
+            <a href="#producto">Así se ve</a>
             <a href="#sectores">Sectores</a>
             <a href="#funciones">Funciones</a>
             <a href="#contadores">Contadores</a>
@@ -167,8 +169,97 @@
             </div>
         </section>
 
+
+        <!-- ASÍ SE VE KOMPAI: CAPTURAS REALES DE LA PLATAFORMA (NEGOCIOS DE DEMOSTRACIÓN) -->
+        <section class="section section--soft" id="producto">
+            <div class="container">
+                <div class="section__head">
+                    <span class="kicker">Así se ve Kompai</span>
+                    <h2>Hecho para tocar, no para llenar formularios</h2>
+                    <p class="section__sub">Pantallas reales de Kompai con negocios de demostración. Botones grandes, todo a un toque y pensado para el día a día de tu negocio.</p>
+                </div>
+                <div class="showcase__tabs" role="tablist" aria-label="Pantallas de Kompai">
+                    <button type="button" class="sector-btn" role="tab" id="tab-vender" aria-controls="panel-vender" aria-selected="true"><span aria-hidden="true">👆</span>Vender tocando</button>
+                    <button type="button" class="sector-btn" role="tab" id="tab-tablero" aria-controls="panel-tablero" aria-selected="false" tabindex="-1"><span aria-hidden="true">👨‍🍳</span>Tablero y cocina</button>
+                    <button type="button" class="sector-btn" role="tab" id="tab-pagina" aria-controls="panel-pagina" aria-selected="false" tabindex="-1"><span aria-hidden="true">🛍️</span>Tu menú o tu tienda</button>
+                    <button type="button" class="sector-btn" role="tab" id="tab-reservas" aria-controls="panel-reservas" aria-selected="false" tabindex="-1"><span aria-hidden="true">📅</span>Reservas en línea</button>
+                    <button type="button" class="sector-btn" role="tab" id="tab-hoy" aria-controls="panel-hoy" aria-selected="false" tabindex="-1"><span aria-hidden="true">☀️</span>Panel «Hoy»</button>
+                </div>
+
+                <div class="showcase__panel" role="tabpanel" id="panel-vender" aria-labelledby="tab-vender">
+                    <div class="showcase__copy">
+                        <h3>Una caja que se maneja con el dedo</h3>
+                        <p>Toca los productos, elige el cliente, cómo lo entregas y cómo te paga, y cobra. Kompai calcula el vuelto, descuenta el inventario y anota el fiado.</p>
+                        <ul class="checklist">
+                            <li>Lo más vendido aparece primero</li>
+                            <li>Efectivo con vuelto, Nequi, Daviplata, tarjeta, transferencia o fiado</li>
+                            <li>En el computador, la tablet o el celular</li>
+                        </ul>
+                    </div>
+                    <figure class="browser"><span class="browser__bar" aria-hidden="true"><i></i><i></i><i></i></span><img src="producto/vender.webp" width="1600" height="1000" loading="lazy" alt="Pantalla Vender de Kompai: productos para tocar a la izquierda y la venta con cliente, entrega y forma de pago a la derecha"></figure>
+                </div>
+
+                <div class="showcase__panel" role="tabpanel" id="panel-tablero" aria-labelledby="tab-tablero" hidden>
+                    <div class="showcase__copy">
+                        <h3>Todos los pedidos en un tablero en vivo</h3>
+                        <p>Los pedidos del mostrador, de WhatsApp y de tu página llegan a un solo lugar: Nuevos, Preparando, Listos y Entregados. Arrastra la tarjeta o toca su botón para avanzar.</p>
+                        <ul class="checklist">
+                            <li>Suena cuando entra un pedido nuevo</li>
+                            <li>Pantalla de cocina con letra grande para una tablet</li>
+                            <li>Ves cuánto lleva esperando cada pedido y quién debe</li>
+                        </ul>
+                    </div>
+                    <figure class="browser"><span class="browser__bar" aria-hidden="true"><i></i><i></i><i></i></span><img src="producto/tablero.webp" width="1600" height="1000" loading="lazy" alt="Tablero de pedidos de Kompai con las columnas Nuevos, Preparando, Listos y Entregados hoy"></figure>
+                </div>
+
+                <div class="showcase__panel" role="tabpanel" id="panel-pagina" aria-labelledby="tab-pagina" hidden>
+                    <div class="showcase__copy">
+                        <h3>Tu página de pedidos, a la medida de tu negocio</h3>
+                        <p>El enlace que compartes por WhatsApp e Instagram se adapta a lo que vendes: una carta por categorías si tienes comidas, o una vitrina con carrito si tienes un comercio.</p>
+                        <ul class="checklist">
+                            <li>Lo más pedido primero, sin listas eternas</li>
+                            <li>Tu cliente elige, revisa su pedido y lo envía en dos pasos</li>
+                            <li>Código QR por mesa para pedir desde el restaurante</li>
+                        </ul>
+                    </div>
+                    <div class="phones">
+                        <figure class="phone-shot"><img src="producto/menu.webp" width="600" height="1299" loading="lazy" alt="Página de pedidos estilo menú de un restaurante, con lo más pedido y las categorías"><figcaption>Menú para comidas</figcaption></figure>
+                        <figure class="phone-shot"><img src="producto/tienda.webp" width="600" height="1299" loading="lazy" alt="Página de pedidos estilo tienda, con productos en vitrina y carrito"><figcaption>Tienda para comercios</figcaption></figure>
+                    </div>
+                </div>
+
+                <div class="showcase__panel" role="tabpanel" id="panel-reservas" aria-labelledby="tab-reservas" hidden>
+                    <div class="showcase__copy">
+                        <h3>Tus clientes reservan solos</h3>
+                        <p>Eligen el servicio, el día y una hora libre según tu horario y la agenda de tu equipo. Sin llamadas ni mensajes de ida y vuelta, y sin citas cruzadas.</p>
+                        <ul class="checklist">
+                            <li>Solo muestra las horas realmente disponibles</li>
+                            <li>Asigna la cita a la persona libre</li>
+                            <li>Pedir y reservar desde el mismo enlace</li>
+                        </ul>
+                    </div>
+                    <div class="phones phones--one">
+                        <figure class="phone-shot"><img src="producto/reservar.webp" width="600" height="1299" loading="lazy" alt="Página de reservas de una veterinaria: elegir el día y la hora libre"><figcaption>Reservas en línea</figcaption></figure>
+                    </div>
+                </div>
+
+                <div class="showcase__panel" role="tabpanel" id="panel-hoy" aria-labelledby="tab-hoy" hidden>
+                    <div class="showcase__copy">
+                        <h3>Abres Kompai y sabes qué hacer</h3>
+                        <p>El panel «Hoy» te muestra lo que necesita atención ahora mismo, cada cosa con su botón, y cómo van las ventas del día comparadas con ayer.</p>
+                        <ul class="checklist">
+                            <li>Pedidos listos, chats esperando y productos por reponer</li>
+                            <li>Próximas citas de las siguientes horas</li>
+                            <li>Cada persona del equipo ve solo lo que le toca</li>
+                        </ul>
+                    </div>
+                    <figure class="browser"><span class="browser__bar" aria-hidden="true"><i></i><i></i><i></i></span><img src="producto/hoy.webp" width="1600" height="1000" loading="lazy" alt="Panel Hoy de Kompai con las tareas del momento y las ventas del día"></figure>
+                </div>
+            </div>
+        </section>
+
         <!-- SECTORES -->
-        <section class="section section--soft" id="sectores">
+        <section class="section" id="sectores">
             <div class="container">
                 <div class="section__head">
                     <span class="kicker">Se adapta a tu negocio</span>
@@ -181,7 +272,7 @@
         </section>
 
         <!-- FUNCIONES -->
-        <section class="section" id="funciones">
+        <section class="section section--soft" id="funciones">
             <div class="container">
                 <div class="section__head">
                     <span class="kicker">Funciones</span>
@@ -189,13 +280,16 @@
                     <p class="section__sub">El pedido de WhatsApp se vuelve venta, descuenta inventario, se factura y llega al reporte de tu contador.</p>
                 </div>
                 <div class="grid grid--3 features">
-                    <article class="feature"><span>🛒</span><h3>Catálogo y pedidos</h3><p>Tu propio enlace con fotos, precios, adicionales, domicilios y horarios.</p></article>
-                    <article class="feature"><span>📅</span><h3>Agenda y turnos</h3><p>Citas por persona o recurso, recordatorios y agendamiento automático por WhatsApp.</p></article>
+                    <article class="feature"><span>🤖</span><h3>Kompai IA en WhatsApp</h3><p>Responde a tus clientes al instante: toma pedidos, dice cómo va un pedido, agenda citas y te pasa el chat cuando hace falta una persona.</p></article>
+                    <article class="feature"><span>🛒</span><h3>Catálogo y pedidos</h3><p>Tu propio enlace con fotos, precios y adicionales: menú para comidas o tienda con carrito. Cárgalo con una foto de tu carta.</p></article>
+                    <article class="feature"><span>👆</span><h3>Vender tocando</h3><p>Una caja rápida para el mostrador: toca productos, cobra y entrega el vuelto. Sin digitar.</p></article>
+                    <article class="feature"><span>👨‍🍳</span><h3>Tablero y cocina</h3><p>Todos los pedidos en vivo, del nuevo al entregado, con aviso sonoro y pantalla para la cocina.</p></article>
+                    <article class="feature"><span>📅</span><h3>Agenda y reservas</h3><p>Citas por persona, horas libres según tu horario y reservas en línea sin llamadas.</p></article>
                     <article class="feature"><span>🚗</span><h3>Servicios en calle</h3><p>Rutas, "voy en camino", fotos de antes y después, y firma del cliente con evidencia.</p></article>
-                    <article class="feature"><span>💵</span><h3>Caja y pagos</h3><p>Efectivo, Nequi, Daviplata, transferencia o llaves Bre-B, y cierre de caja.</p></article>
+                    <article class="feature"><span>💵</span><h3>Caja y pagos</h3><p>Efectivo, Nequi, Daviplata, tarjeta o transferencia, gastos del día y cierre de caja.</p></article>
                     <article class="feature"><span>📦</span><h3>Inventario</h3><p>Se descuenta solo con cada venta. Alertas de bajo stock y vencimientos.</p></article>
                     <article class="feature"><span>🤝</span><h3>Fiado y cobros</h3><p>Lo que te deben, abonos y recordatorios de pago automáticos por WhatsApp.</p></article>
-                    <article class="feature"><span>🧾</span><h3>Facturación electrónica</h3><p>Factura y documento equivalente POS electrónico con un clic, a través de un proveedor autorizado.</p></article>
+                    <article class="feature"><span>🧾</span><h3>Facturación electrónica</h3><p>Factura electrónica con un clic, a través de un proveedor autorizado por la DIAN.</p></article>
                     <article class="feature"><span>📣</span><h3>Recordatorios y promociones</h3><p>Mensajes que hacen volver a tus clientes: la próxima cita, la vacuna, la promo del viernes.</p></article>
                     <article class="feature"><span>📊</span><h3>Reportes</h3><p>Cuánto vendes, qué se vende más y cuánto ganas. Y un resumen semanal por WhatsApp.</p></article>
                 </div>
@@ -293,7 +387,7 @@
                     <li class="mission">
                         <span class="mission__badge">Misión 1</span>
                         <h3>Monta tu catálogo</h3>
-                        <p>Sube tus productos o servicios con fotos y precios. Si quieres, lo hacemos por ti.</p>
+                        <p>Tómale una foto a tu carta o lista de precios y Kompai IA arma el catálogo, o empieza con uno de ejemplo para tu tipo de negocio.</p>
                     </li>
                     <li class="mission">
                         <span class="mission__badge">Misión 2</span>
@@ -342,12 +436,20 @@
                         <p>Kompai se adapta a negocios que venden productos, servicios o ambos: comidas, lavaderos, veterinarias, peluquerías, tiendas, servicios a domicilio y más. Si tienes dudas, escríbenos.</p>
                     </details>
                     <details>
+                        <summary>¿Qué hace Kompai IA?</summary>
+                        <p>Es el asistente que atiende el WhatsApp de tu negocio: responde preguntas, toma pedidos, le cuenta al cliente cómo va su pedido y agenda citas en las horas libres. Cuando el cliente necesita a una persona, te pasa la conversación.</p>
+                    </details>
+                    <details>
+                        <summary>¿Lo puedo usar desde el celular?</summary>
+                        <p>Sí. Kompai funciona en el navegador del celular, la tablet o el computador, y lo puedes instalar como una app con el nombre de tu negocio, sin pasar por la tienda de aplicaciones.</p>
+                    </details>
+                    <details>
                         <summary>¿Necesito RUT o facturar electrónicamente para usar Kompai?</summary>
                         <p>No. Puedes empezar con pedidos, agenda, caja, inventario y fiado aunque todavía no factures. Cuando te formalices, activas la facturación electrónica y tu contador te acompaña desde el mismo sistema.</p>
                     </details>
                     <details>
                         <summary>¿Cómo funciona la facturación electrónica?</summary>
-                        <p>Las facturas y el documento equivalente POS electrónico se emiten a través de un proveedor tecnológico autorizado por la DIAN, conectado a Kompai. Tú solo oprimes "facturar".</p>
+                        <p>Las facturas se emiten a través de un proveedor tecnológico autorizado por la DIAN, conectado a Kompai. Tú solo oprimes "facturar" y tu cliente recibe el enlace de su factura.</p>
                     </details>
                     <details>
                         <summary>¿Tengo que cambiar mi número de WhatsApp?</summary>

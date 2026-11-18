@@ -114,6 +114,26 @@ sectorsEl.addEventListener('keydown', (event) => {
 
 renderSector(SECTORS[0]);
 
+// ASÍ SE VE KOMPAI: PESTAÑAS CON LAS CAPTURAS (CLIC Y FLECHAS DEL TECLADO).
+const showTabs = [...document.querySelectorAll('.showcase__tabs [role="tab"]')];
+function showPanel(tab) {
+    showTabs.forEach(t => {
+        const active = t === tab;
+        t.setAttribute('aria-selected', String(active));
+        t.tabIndex = active ? 0 : -1;
+        document.getElementById(t.getAttribute('aria-controls')).hidden = !active;
+    });
+}
+showTabs.forEach((tab, i) => {
+    tab.addEventListener('click', () => showPanel(tab));
+    tab.addEventListener('keydown', (event) => {
+        if (!['ArrowRight', 'ArrowLeft'].includes(event.key)) return;
+        const next = showTabs[(i + (event.key === 'ArrowRight' ? 1 : -1) + showTabs.length) % showTabs.length];
+        next.focus();
+        showPanel(next);
+    });
+});
+
 // MENÚ MÓVIL.
 const toggle = document.querySelector('.nav__toggle');
 const mobileMenu = document.getElementById('mobile-menu');

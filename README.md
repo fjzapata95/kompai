@@ -15,6 +15,7 @@ La página está en modo **lista de espera para negocios piloto**: invita a los 
 | `styles.css` | Diseño (colores, tipografía, adaptación a celular) |
 | `app.js` | Sectores interactivos, menú móvil y formulario a WhatsApp |
 | `favicon.svg`, `apple-touch-icon.png` | Íconos de la pestaña y del celular |
+| `producto/` | Capturas reales de la plataforma (negocios de demostración) para la sección «Así se ve Kompai», en WebP |
 | `brand/` | Identidad: logo, símbolo, versiones en blanco, avatar para WhatsApp e imagen para compartir (SVG y PNG) |
 
 ## Antes de publicar
